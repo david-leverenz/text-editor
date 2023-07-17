@@ -27,10 +27,11 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
-        name: 'My Progressive Web App', // customize
-        short_name: 'MyPWA',
-        description: 'My awesome Progressive Web App!',
-        // Need public path and start URL,publicPath: null, start_url: ".",
+        name: 'Test Editing Extraordinaire', // customize
+        short_name: 'TEE',
+        description: "It's a text editor I had to make for class :(",
+        publicPath: null,
+        start_url: ".",
         background_color: '#ffffff',
         crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
         icons: [
