@@ -19,7 +19,7 @@ This has been deployed to Heroku and has proper build scripts for a webpack appl
 
 ## Links
 **GitHub:** https://github.com/david-leverenz/text-editor<br>
-**Live Link:** <br>
+**Live Link:** https://vast-chamber-54379-1932ca03f16e.herokuapp.com/<br>
 **Screen Shot:** <br>
 ![image](https://github.com/david-leverenz/text-editor/assets/131185593/d2dedf24-1e97-45e8-9a75-308265cb142e)
 
