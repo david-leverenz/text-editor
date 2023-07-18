@@ -30,10 +30,11 @@ module.exports = () => {
         name: 'Test Editing Extraordinaire', // customize
         short_name: 'TEE',
         description: "It's a text editor I had to make for class :(",
-        publicPath: null,
-        start_url: ".",
+        publicPath: "/",
+        fingerprints: false,
+        inject: true,
+        start_url: "/",
         background_color: '#ffffff',
-        crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
