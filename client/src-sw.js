@@ -27,6 +27,7 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
+// Registers the route for caching assets
 registerRoute(
   ({ request }) => request.destination === 'image',
 	new CacheFirst({
@@ -35,7 +36,7 @@ registerRoute(
 			new CacheableResponsePlugin({
 				statuses: [0, 200],
 			}),
-			new ExpirationPlugin({
+			new ExpirationPlugin({ // Sets when the cache expires
 				maxEntries: 60,
 				maxAgeSeconds: 30 * 24 * 60 * 60,
 			}),

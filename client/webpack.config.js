@@ -1,3 +1,4 @@
+// Requiring our webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
@@ -10,22 +11,22 @@ module.exports = () => {
   return {
     mode: 'development',
     entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
+      main: './src/js/index.js', // Main entry point for application.
+      install: './src/js/install.js' // Look in here for the installation logic.
     },
     output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].bundle.js', // Create the bundled files.
+      path: path.resolve(__dirname, 'dist'), // Putting the bundled files here.
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'J.A.T.E',
+        template: './index.html', // Minifies the html document
       }),
       new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swSrc: './src-sw.js', // Creates the service worker for offline usage.
+        swDest: 'src-sw.js', // Place where the service worker file.
       }),
+      // This is a list of all of stuff in our build folder.
       new WebpackPwaManifest({
         name: 'Test Editing Extraordinaire', // can customize your name
         short_name: 'TEE',
@@ -48,13 +49,16 @@ module.exports = () => {
     module: {
       rules: [
         {
+          // Include all .css files.
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
         {
+          // Include all .mjs or .js files, except node modules.
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
+            // Takes new code and changes it to a more stable version of the code.
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
