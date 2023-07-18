@@ -18,7 +18,7 @@ When you register a service worker you will have static assets pre cached upon l
 This has been deployed to Heroku and has proper build scripts for a webpack application.<br>
 
 ## Links
-**GitHub:** [https://github.com/david-leverenz/social-network-api](https://github.com/david-leverenz/text-editor)<br>
+**GitHub:** https://github.com/david-leverenz/text-editor<br>
 **Live Link:** <br>
 **Screen Shot:** <br>
 ![image](https://github.com/david-leverenz/text-editor/assets/131185593/d2dedf24-1e97-45e8-9a75-308265cb142e)
