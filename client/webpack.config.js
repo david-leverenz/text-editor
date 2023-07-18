@@ -27,7 +27,7 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
-        name: 'Test Editing Extraordinaire', // customize
+        name: 'Test Editing Extraordinaire', // can customize your name
         short_name: 'TEE',
         description: "It's a text editor I had to make for class :(",
         publicPath: "/",
